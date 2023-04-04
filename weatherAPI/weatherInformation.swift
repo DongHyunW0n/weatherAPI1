@@ -7,21 +7,18 @@
 
 import Foundation
 
-struct weatherInfo : Codable { //코더블은 인코딩 디코딩 모두 가능 ㅋ
+struct weatherInformation : Codable { //코더블은 인코딩 디코딩 모두 가능 ㅋ
     
-    let weather : [Weather]
-    let temp : Temp
-    let name : String
+    let weather: [Weather]
+    let temp: Temp
+    let name: String
     
-    enum CodingKeys : String, CodingKey {
-        
-        case weather
-        case temp = "main"
-        case name
+    enum CodingKeys: String, CodingKey {
+      case weather
+      case temp = "main"
+      case name
     }
-    
-    
-}
+  }
 
 
 struct Weather : Codable {
@@ -29,7 +26,7 @@ struct Weather : Codable {
     let id : Int
     let main : String
     let description : String
-    let icol : String
+    let icon : String
     
 }
 
